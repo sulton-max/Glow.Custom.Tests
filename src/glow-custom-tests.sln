@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glow.Commsn.Domain.Tests", "Glow.Commsn.Domain.Tests\Glow.Commsn.Domain.Tests.csproj", "{EE61D10C-B70B-4820-BCA1-F2E58F825DA4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Glow.Comms.Domain", "..\glow_comms\backend\Common\Glow.Comms.Domain\Glow.Comms.Domain.csproj", "{5BFF26FE-E939-4529-8E54-A0836AD7DEB4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EE61D10C-B70B-4820-BCA1-F2E58F825DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE61D10C-B70B-4820-BCA1-F2E58F825DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE61D10C-B70B-4820-BCA1-F2E58F825DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE61D10C-B70B-4820-BCA1-F2E58F825DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BFF26FE-E939-4529-8E54-A0836AD7DEB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BFF26FE-E939-4529-8E54-A0836AD7DEB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BFF26FE-E939-4529-8E54-A0836AD7DEB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BFF26FE-E939-4529-8E54-A0836AD7DEB4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
