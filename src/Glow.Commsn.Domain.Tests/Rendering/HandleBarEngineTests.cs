@@ -50,7 +50,7 @@ public partial class HandleBarEngineTests
     private HandlebarsTemplate<object, object> GetCompiledTemplateForDictionary(string template)
     {
         var handlebars = Handlebars.Create();
-        handlebars.Configuration.UseJson();
+        // handlebars.Configuration.UseJson();
         var compiledTemplate = handlebars.Compile(template);
         return compiledTemplate;
     }
@@ -102,9 +102,9 @@ public partial class HandleBarEngineTests
         };
     }
 
-    public static TheoryData<(Dictionary<string, string> Variables, string Template, string RenderedTemplate)> GetValidDictionaryTemplate()
+    public static TheoryData<(Dictionary<string, object> Variables, string Template, string RenderedTemplate)> GetValidDictionaryTemplate()
     {
-        var variables = new Dictionary<string, string>
+        var variables = new Dictionary<string, object>
         {
             { "title", "My Blog" },
             { "greeting", "Hello John!" }
@@ -112,16 +112,16 @@ public partial class HandleBarEngineTests
         var template = "{{title}}. {{greeting}}";
         var renderedTemplate = "My Blog. Hello John!";
 
-        return new TheoryData<(Dictionary<string, string> Variables, string Template, string RenderedTemplate)>
+        return new TheoryData<(Dictionary<string, object> Variables, string Template, string RenderedTemplate)>
         {
             (variables, template, renderedTemplate)
         };
     }
 
-    public static TheoryData<(Dictionary<string, string> Variables, string Template, string RenderedTemplate)> GetInvalidDictionaryTemplate()
+    public static TheoryData<(Dictionary<string, object> Variables, string Template, string RenderedTemplate)> GetInvalidDictionaryTemplate()
     {
-        var emptyVariables = new Dictionary<string, string>();
-        var variables = new Dictionary<string, string>
+        var emptyVariables = new Dictionary<string, object>();
+        var variables = new Dictionary<string, object>
         {
             { "title", "My Blog" },
             { "greeting", "Hello John!" }
@@ -129,7 +129,7 @@ public partial class HandleBarEngineTests
         var template = "My Blog. Hello John!";
         var renderedTemplate = "My Blog. Hello John!";
 
-        return new TheoryData<(Dictionary<string, string> Variables, string Template, string RenderedTemplate)>
+        return new TheoryData<(Dictionary<string, object> Variables, string Template, string RenderedTemplate)>
         {
             (variables, template, renderedTemplate),
             (emptyVariables, template, renderedTemplate)
